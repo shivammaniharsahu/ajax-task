@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html>
+<title>JSON Application</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+	  <!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+	<!-- Popper JS -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+	<!-- Latest compiled JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	<script src="https://www.w3schools.com/lib/w3.js"></script>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+
+
+<style>
+	body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Calibri", sans-serif;}
+</style>
+</head>
+<body> <!--d for display block and m for margin-->
+                    
+            <form  id="disp" class="bg-light">
+              <div class="container">
+               <div class="col-sm-8 m-auto d-block">  
+  
+			          <div class="h1">
+			                    <h1>
+		                      <center>
+		                            Enter The Details You Want To Update
+		                      </center>
+		                    </h1>
+		              </div>
+                      <div class="form-group">
+
+
+                            <label>
+                              ID
+                            </label>
+                            <input name="id" class="form-control" placeholder="ID check from below card  Informtion" type="text" required//>
+                      </div>   
+                      <div class="form-group">
+                            <label>
+                              Name
+                            </label>
+                            <input name="name" class="form-control" placeholder="Name" type="text" required//>
+                      </div>
+                       <div class="form-group">
+                              <label>
+                                Email Id
+                              </label>
+                              <input name="email" class="form-control" placeholder="Email address" type="email" />
+                        </div>
+                       <div class="form-group">
+                              <label>
+                                Password
+                              </label>
+                              <input name ="password" id="password" class="form-control" placeholder="Create password" type="password"  pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,16}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 and less than 16"  required />
+                        </div>
+                      <div class="form-group">    
+                              <label>
+                                Confirm password
+                              </label>
+                               <input name ="repeat_password" id="confirm_password" class="form-control" placeholder="Repeat password" type="password"  pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,16}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 and less than 16"  required/>
+                      </div>
+                      <div class="form-group">
+                        <label>Age</label>
+                          <input class="form-control" type="number" name="age" min="19" max="99" required/>
+                        </div>
+                        <div class="form-group">
+                          <label for="color">Favourite Color</label>
+                            <select id="color" name="color" class="form-control">
+                              <option selected >blue</option>
+                              <option>orange</option>
+                              <option>red</option>
+                              <option>white</option>
+                              <option>green</option>
+                              <option>red</option>
+                            </select>
+                          </div>
+                       <div class="form-group">   
+                              <label>
+                                Username
+                              </label>
+                              <input name="username" class="form-control" placeholder="User Name" type="text" pattern="[a-z]{1,15}"title="Username should only contain lowercase letters. e.g. siddharth not more than 15 charecters long" required/>
+                         </div>
+                         <div class="form-group">     
+                                <label for="exampleFormControlSelect1">GENDER</label>
+                                    <br>
+                                <label class="radio-inline">
+                                  <input type="radio" name="gender" value="male" >Male
+                                  </label>
+                                  <label class="radio-inline">
+                                    <input type="radio" name="gender" value="female">Female
+                                  </label>
+                                  <label class="radio-inline">
+                                    <input type="radio" name="gender" value="other">Other
+                                  </label>
+                                </div>
+                          <input  type="submit" class="btn btn-success btn-block submit" value="Update Account">
+                        </div>
+                    </div>
+                </div>
+            </div>
+          </form>
+ <h1 class="w3-wide w3-center w3-sixe-80 w3-padding w3-yellow">Informtion  Of Database</h1>
+ <div class="w3-container-40 w3-center w3-content w3-blue" style="max-width:800px">
+ <div class="w3-row-padding-20 w3-padding-80" style="margin:0-16px">
+
+            <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    
+            <script>
+                function getParams()
+                {
+                    var idx = document.URL.indexOf('?');
+                    var params = new Array();
+                    if (idx != -1) 
+                    {
+                        var pairs = document.URL.substring(idx+1, document.URL.length).split('&');
+                        for (var i=0; i<pairs.length; i++)
+                        {
+                            nameVal = pairs[i].split('=');
+                            params[nameVal[0]] = nameVal[1];
+                        }
+                    }
+                    return params;
+                }
+		               	 params = getParams();
+		                email = unescape(params["email"]);
+		                password = unescape(params["password"]);
+		                var ID="";
+		                var b=5;
+					    $.ajax({url: "https://technocracy-task-2.herokuapp.com/people", success: function(result)
+					    {
+					   		
+						for(var i=0;i<=result.length;i++)
+						{
+
+							     if (email == result[i].email && password == result[i].password)
+							     {
+							     		b=0;
+										ID=result[i].id;
+										console.log(ID);
+								
+										document.querySelector('body').innerHTML += `
+							    		<div class="w3-quarter w3-margin-bottom-60 w3-padding">
+							    	
+							          	<div class="w3-display-container w3-card-4 w3-orange" style="height:300px;width:300px">
+							          	 	<div class="w3-padding">Id: ${result[i].id}</div>
+							          	<div class="w3-padding">Name: ${result[i].name}</div>
+									   <div class="w3-padding">Email: ${result[i].email}</div>
+										<div class="w3-padding">Password: ${result[i].password}</div>
+									   <div class="w3-padding">Age: ${result[i].age}</div>
+									   <div class="w3-padding">Color: ${result[i].color}</div>
+									   <div class="w3-padding">Username: ${result[i].username}</div>
+									   <div class="w3-padding">Gender: ${result[i].gender}</div>
+									 </div>
+								  </div>
+							 	</div>
+								`
+								break;
+								}
+								if(b!=0)
+								{
+									alert("Invalid Email Id And Password");
+									   window.location.href="login14.html";
+                            
+                       
+								}
+
+                 
+						}
+						
+					}
+				});
+
+</script>
+
+                <button class="form-control btn btn-danger" type="submit" name="submit1"  onclick="delete_fun(ID)"  >Delete</button>
+      
+</div>
+  <script>
+        function pagescroll() {
+            window.scrollBy(0,50);
+            scrolldelay = setTimeout(pagescroll(),100);
+        }
+    </script>
+
+ <script type="text/javascript">
+        function delete_fun(ID)
+         {
+            var x=0;
+            console.log(x);
+          					$.ajax({
+
+                                    type: "DELETE",
+                                    url: "https://technocracy-task-2.herokuapp.com/people/"+ID,
+                                    // data: data1,
+                                    contentType: 'application/json; charset=utf-8',
+                                    dataType: 'json',
+                                    async: true,
+                                    success: function (msg) {
+                                        alert("Your DATA is sucessfully deleted")
+                                        window.location.href="form3.html";
+                                                               
+                                            }
+
+                                });
+          };
+    	
+    	
+                
+
+ </script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+   <script type="text/javascript">
+            function getParams(){
+                var idx = document.URL.indexOf('?');
+                var params = new Array();
+                if (idx != -1) {
+                    var pairs = document.URL.substring(idx+1,document.URL.length).split('&');
+                    for (var i=0; i<pairs.length; i++){
+                        nameVal = pairs[i].split('=');
+                        params[nameVal[0]] = nameVal[1];
+                    }
+                }
+                return params;
+            }
+            params = getParams();
+            id=unescape(params["id"]);
+            name= unescape(params["name"]);
+            Email = unescape(params["email"]);
+            Password=unescape(params["password"]);
+            Age=unescape(params["age"]);
+            Color=unescape(params["color"]);
+            Username= unescape(params["username"]);
+            Gender=unescape(params["gender"]);
+    
+      var arr = {name:name,email:Email,password:Password,age:Age,color:Color,username:Username,gender:Gender};
+    $.ajax({
+        url: 'https://technocracy-task-2.herokuapp.com/people/'+id,
+        type: 'PUT',
+        data: JSON.stringify(arr),
+        contentType: 'application/json; charset=utf-8',
+        dataType: 'json',
+        async: true,
+        success: function(msg) {
+            alert("updated");
+        },
+    
+            error: function (jqXHR, exception) {
+                        var msg = '';
+                          if (jqXHR.status === 0) {
+                              msg = 'Not connect.\n Verify Network.';
+                          } else if (jqXHR.status == 404) {
+                              msg = 'Requested page not found. [404]';
+                          } else if (jqXHR.status == 500) {
+                              msg = 'Entered values must be unique for the user  |  Internal Server Error [500].';
+                          } else if (exception === 'parsererror') {
+                              msg = 'Requested JSON parse failed.';
+                          } else if (exception === 'timeout') {
+                              msg = 'Time out error.';
+                          } else if (exception === 'abort') {
+                              msg = 'Ajax request aborted.';
+                          } else {
+                              msg = 'Uncaught Error.\n' + jqXHR.responseText;
+                          }
+                          alert(msg);
+                }
+        });
+  </script>
+
+</body>
+</html>

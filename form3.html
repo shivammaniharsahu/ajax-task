@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>sign up</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <!-- Popper JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <script src="https://www.w3schools.com/lib/w3.js"></script>
+   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <style>
+                .h1{
+                    text-shadow: 2px 2px 5px red;
+                }
+      </style>
+  </head>
+  <body background-color="#e2a356">
+    <div class="h1">
+      <h1>
+        <center>
+          Please Sign Up 
+        </center>
+      </h1>
+    </div>
+
+      <div class="col-sm-6 m-auto d-block">   <!--d for display block and m for margin-->
+        <form method="get" action="outputs1.html"  class="bg-light">
+          <div class="form-group">
+        <label>
+          Name
+        </label>
+              <input name="name" class="form-control" placeholder="Name" type="text" required//>
+        <label>
+          Email Id
+        </label>
+            <input name="email" class="form-control" placeholder="Email address" type="email" />
+        <label>
+          Password
+        </label>
+            <input name ="password" id="password" class="form-control" placeholder="Create password" type="password"  pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,16}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 and less than 16"  required />
+        <label>
+          Confirm password
+        </label>
+
+            <input name ="repeat_password" id="confirm_password" class="form-control" placeholder="Repeat password" type="password"  pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,16}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 and less than 16"  required/>
+            <label>Age</label>
+              <input class="form-control" type="number" name="age" min="19" max="99" required/>
+              <label for="color">Favourite Color</label>
+                <select id="color" name="color" class="form-control">
+                  <option selected>blue</option>
+                  <option>orange</option>
+                  <option>red</option>
+                  <option>white</option>
+                  <option>green</option>
+                  <option>red</option>
+                </select>
+          <label>
+            Username
+        </label>
+            <input name="username" class="form-control" placeholder="User Name" type="text" pattern="[a-z]{1,15}"title="Username should only contain lowercase letters. e.g. siddharth not more than 15 charecters long" required/>
+
+            <label for="exampleFormControlSelect1">GENDER</label>
+                <br>
+            <label class="radio-inline">
+              <input type="radio" name="gender" value="male" >Male
+              </label>
+              <label class="radio-inline">
+                <input type="radio" name="gender" value="female">Female
+              </label>
+              <label class="radio-inline">
+                <input type="radio" name="gender" value="other">Other
+              </label>
+              <input  type="submit" class="btn btn-success btn-block submit" value="Add Account">
+              "Already a member?"<a href="login14.html"> <font color="blue">Login Please</font></a>
+              
+      </form>
+  </div>
+</div>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <script type="text/javascript" src="particles.min.js"></script>
+        <script type="text/javascript" src="app.js"></script>
+        <script type="text/javascript" src="particles.js"></script>
+  </body>
+</html>
