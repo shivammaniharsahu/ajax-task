@@ -115,7 +115,7 @@
  <div class="w3-row-padding-20 w3-padding-80" style="margin:0-16px">
 
             <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    
+   
             <script>
                 function getParams()
                 {
@@ -167,14 +167,7 @@
 								`
 								break;
 								}
-								if(b!=0)
-								{
-									alert("Invalid Email Id And Password");
-									   window.location.href="login14.html";
-                            
-                       
-								}
-
+						
                  
 						}
 						
@@ -234,7 +227,6 @@
                 return params;
             }
             params = getParams();
-            id=unescape(params["id"]);
             name= unescape(params["name"]);
             Email = unescape(params["email"]);
             Password=unescape(params["password"]);
@@ -245,7 +237,7 @@
     
       var arr = {name:name,email:Email,password:Password,age:Age,color:Color,username:Username,gender:Gender};
     $.ajax({
-        url: 'https://technocracy-task-2.herokuapp.com/people/'+id,
+        url: 'https://technocracy-task-2.herokuapp.com/people/'+ID,
         type: 'PUT',
         data: JSON.stringify(arr),
         contentType: 'application/json; charset=utf-8',
